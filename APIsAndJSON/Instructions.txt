@@ -1,27 +1,6 @@
 ﻿ALGO
-1. Connect & call both APIS
-2. Set first statement of conversation
-3. set repsonse from opposing person. 
-4. repeat another 4 times
-5. print conversation to console. 
-Let’s create a console application that calls both the Ron Swanson API, and the Kanye West API. 
-
-https://ron-swanson-quotes.herokuapp.com/v2/quotes
-
-https://api.kanye.rest
-
-
-
-Using both APIs, make Ron Swanson and Kanye West have a conversation
-it should print to the console 
-with at least 5 quotes 
-and have them alternate to simulate a conversation
-
-
-
-Hints:
-Use a for loop to generate at least 5 quotes from each api and have them alternate to simulate a conversation
-
-Here is some code to utilize for parsing the ron swanson response:
-
-var ronQuote = JArray.Parse(ronResponse).ToString().Replace('[', ' ').Replace(']', ' ').Trim();
+1. Connect & call both APIS.
+2. Parse Kanye response.
+3. Parse Swanson response. 
+4. Print conversation to console. 
+5. Repeat 5 times to simulate a conversation.

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System.Runtime.Intrinsics.X86;
 using static System.Net.WebRequestMethods;
+using System.Threading;
 
 namespace APIsAndJSON
 {
@@ -16,13 +17,12 @@ namespace APIsAndJSON
             {
                 var westResponse = client.GetStringAsync(urlWest).Result;
                 var westQ = JObject.Parse(westResponse).GetValue("quote").ToString();
-                Console.WriteLine($"Kanye: {westQ}\n");
+                Console.Write($"Kanye: {westQ}\n");
+                Thread.Sleep(1000);
 
-                var swansonResponse = client.GetStringAsync(urlSwanson).Result;
-                var swansonQ = JArray.Parse(swansonResponse).ToString().Replace('[', ' ').Replace(']', ' ').Trim();
-                Console.WriteLine($"Ron: {swansonQ}\n");
-
-                Console.WriteLine();
+                var swansonResponse = client.GetStringAsync(urlSwanson).Result;              
+                Console.WriteLine($"Ron: {JArray.Parse(swansonResponse).ToString().Replace('[', ' ').Replace(']', ' ').Trim()}\n\n");
+                Thread.Sleep(1500);
             }
         }
     }
