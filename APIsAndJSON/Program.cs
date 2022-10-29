@@ -28,7 +28,10 @@ namespace APIsAndJSON
             for (int i = 0; i < 5; i++)
             {
                 PrintQuote(urlWest, r => JObject.Parse(r).GetValue("quote").ToString(), "West");
-                Thread.Sleep(1000);                
+                Thread.Sleep(1000);
+                PrintQuote(urlNorris, r => JObject.Parse(r).GetValue("value").ToString(), "Norris");
+                Thread.Sleep(1000);
+               
             }
         }
     }
