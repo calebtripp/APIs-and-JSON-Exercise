@@ -1,14 +1,4 @@
-## Exercise1:
+SWANSONRESTNORRIS C# CONSOLE APP 
+The app uses public REST APIs to call and parse object and array responses into strings which are presented to simulate a nonsensical conversation between Ron Swanson, Kanye West, and Chuck Norris.
 
-Let’s create a console application that calls both the Ron Swanson API, and the Kanye West API. Using both APIs, make Ron Swanson and Kanye West have a conversation that prints to the console.
-
-Here is some code to utilize for parsing the ron swanson response:
-```
-var ronQuote = JArray.Parse(ronResponse).ToString().Replace('[', ' ').Replace(']', ' ').Trim();
-```
-
-Here are the API urls:
-
-https://ron-swanson-quotes.herokuapp.com/v2/quotes
-
-https://api.kanye.rest
+TOOLS: C#, API, JSON
